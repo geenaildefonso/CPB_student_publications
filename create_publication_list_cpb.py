@@ -2,7 +2,7 @@
 from Bio import Entrez
 import pandas as pd
 
-Entrez.email = 'james.c.pino@vanderbilt.edu'
+Entrez.email = 'geena.ildefonso@vanderbilt.edu' #can update email here 
 
 
 def search(query):
