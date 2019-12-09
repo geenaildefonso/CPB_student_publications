@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 from Bio import Entrez
 import pandas as pd
+import time
 
-Entrez.email = 'geena.ildefonso@vanderbilt.edu' #can update email here 
+Entrez.email = 'geena.ildefonso@vanderbilt.edu'
 
 
 def search(query):
@@ -44,6 +45,8 @@ for i, row in df.iterrows():
     last_name = str(row['LastName'])
     full_name = '%s %s' % (first_name, last_name)
     tmp_papers = search(full_name)
+    time.sleep(2)
+
 
     # if they don't have any publications, None will be returned
     # Nothing to do, so return empty string to new_papers column
